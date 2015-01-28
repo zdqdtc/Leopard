@@ -11,4 +11,6 @@ public @interface Request {
     public int Method() default 0;
 
     public String Action() default "";
+
+    public boolean CacheEnable() default false;
 }

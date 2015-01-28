@@ -21,7 +21,7 @@ import com.cat.leopard.action.request.LoginRequest;
  * @author 	diqingzhu
  *
  */
-@Request(Method = Method.POST, Action = ActionConstant.ACTION_LOGIN)
+@Request(Method = Method.POST, Action = ActionConstant.ACTION_LOGIN, CacheEnable = true)
 public class LoginCall extends BaseCall<LoginRequest> {
     public LoginCall(Context context, LoginRequest object) {
         super(context, object);

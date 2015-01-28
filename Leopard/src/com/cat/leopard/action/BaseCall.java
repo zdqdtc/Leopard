@@ -37,6 +37,8 @@ public class BaseCall<T> {
 
     private int        method;
 
+    private boolean    isFileCache = false;
+
     public BaseCall(Context context, T object) {
         this.context = context;
         HttpUtil httpUtil = new HttpUtil(this);
@@ -56,6 +58,7 @@ public class BaseCall<T> {
                 LogUtils.e(error.networkResponse.statusCode + "");
             }
         });
+        request.setShouldCache(isFileCache);
         CTVolleyHttpFactory.getIntance(context).add(request);
     }
 
@@ -77,5 +80,13 @@ public class BaseCall<T> {
 
     public void setMethod(int method) {
         this.method = method;
+    }
+
+    public boolean isFileCache() {
+        return isFileCache;
+    }
+
+    public void setFileCache(boolean isFileCache) {
+        this.isFileCache = isFileCache;
     }
 }
