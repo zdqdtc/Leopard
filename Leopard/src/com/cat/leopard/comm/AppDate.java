@@ -12,7 +12,7 @@ package com.cat.leopard.comm;
 import android.app.Application;
 import android.util.Log;
 
-import com.cat.leopard.util.FileUtil;
+import com.cat.external.util.FileUtil;
 
 /**
  * 类名:		AppDate

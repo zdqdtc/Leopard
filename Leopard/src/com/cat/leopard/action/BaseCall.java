@@ -18,9 +18,9 @@ import com.alibaba.fastjson.JSON;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.cat.external.util.LogUtils;
+import com.cat.leopard.action.annotation.HttpUtil;
 import com.cat.leopard.factory.CTVolleyHttpFactory;
-import com.cat.leopard.util.HttpUtil;
-import com.cat.leopard.util.LogUtils;
 
 /**
  * 类名:		BaseRequest

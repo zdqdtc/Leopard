@@ -14,8 +14,6 @@ import android.util.AttributeSet;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
-import com.cat.leopard.util.LogUtils;
-
 /**
  * 类名:		ProgressWebView
  * 描述:		TODO
@@ -52,7 +50,7 @@ public class ProgressWebView extends WebView {
         @Override
         public boolean onJsTimeout() {
             // TODO Auto-generated method stub
-            LogUtils.e("fail");
+           
             return super.onJsTimeout();
         }
     }

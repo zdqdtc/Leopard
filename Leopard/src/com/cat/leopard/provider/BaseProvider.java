@@ -19,14 +19,14 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
+import com.cat.external.util.CacheManager;
 import com.cat.leopard.comm.AppDate;
-import com.cat.leopard.util.CacheManager;
 import com.nongfu.customer.cache.DiskCache;
 import com.nongfu.customer.cache.PutCallback;
 
 /**
  * 类名:		BaseProvider
- * 描述:		TODO
+ * 描述:		文件缓存基础类
  * @author 	diqingzhu
  * @param <E>
  *
