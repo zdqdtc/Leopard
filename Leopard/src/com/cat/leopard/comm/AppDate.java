@@ -10,8 +10,8 @@
 package com.cat.leopard.comm;
 
 import android.app.Application;
-import android.util.Log;
 
+import com.cat.external.log.Log;
 import com.cat.external.util.FileUtil;
 
 /**
@@ -20,16 +20,22 @@ import com.cat.external.util.FileUtil;
  * @author 	diqingzhu
  */
 public class AppDate extends Application {
-    
-    private  static final String TAG="leopard";
-    
-   
+    @SuppressWarnings("unused")
+    private static final String  TAG   = "leopard";
+
+    /**
+     * 变量名:		DEBUG
+     * 描述:			是否打开日志
+     * 取值含义:		TODO
+     */
+    private static final boolean DEBUG = true;
+
     @Override
     public void onCreate() {
         // TODO Auto-generated method stub
         super.onCreate();
+        creatDebugModel(DEBUG);
         creatAppFile();
-
     }
 
     /**
@@ -40,7 +46,17 @@ public class AppDate extends Application {
         if (FileUtil.isSdcardAvailable()) {
             FileUtil.createFile(this.getPackageName());
         } else {
-            Log.e(TAG, "Sd卡不可用");
+            Log.w("sd card not exit!");
         }
+    }
+
+    /**
+     * 描述:	 是否启动debug模式
+     *
+     */
+    private void creatDebugModel(boolean isDebug) {
+        Log.setEnabled(isDebug);
+        Log.setLog2FileEnabled(isDebug);
+        Log.setLog2ConsoleEnabled(isDebug);
     }
 }
