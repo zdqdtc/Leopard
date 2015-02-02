@@ -1,9 +1,5 @@
 package com.cat.external.app.update;
 
-import android.content.Context;
-
-import com.cat.leopard.action.BaseCall;
-import com.cat.leopard.action.request.BaseRequest;
 
 /**
  * 自动更新服务的操作接口

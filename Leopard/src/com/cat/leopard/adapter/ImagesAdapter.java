@@ -11,12 +11,14 @@ package com.cat.leopard.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cat.external.factory.CTBitMapFactory;
 import com.cat.leopard.R;
-import com.cat.leopard.factory.CTBitMapFactory;
 import com.cat.leopard.model.Image;
 
 /**

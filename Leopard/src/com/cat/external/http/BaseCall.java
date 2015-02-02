@@ -7,20 +7,18 @@
  *      
  *     Copyright © 1999-2014, leopard, All Rights Reserved 
  */
-package com.cat.leopard.action;
+package com.cat.external.http;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.content.Context;
-
 import com.alibaba.fastjson.JSON;
+import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.cat.external.util.LogUtils;
-import com.cat.leopard.action.annotation.HttpUtil;
-import com.cat.leopard.factory.CTVolleyHttpFactory;
+import com.cat.leopard.action.ActionConstant;
 
 /**
  * 类名:		BaseRequest
@@ -29,13 +27,13 @@ import com.cat.leopard.factory.CTVolleyHttpFactory;
  *
  */
 public class BaseCall<T> {
-    private String     strAction;
+    private String     strAction   = "";
 
     private JSONObject requestBody;
 
     private Context    context;
 
-    private int        method;
+    private int        method      = Method.POST;
 
     private boolean    isFileCache = false;
 

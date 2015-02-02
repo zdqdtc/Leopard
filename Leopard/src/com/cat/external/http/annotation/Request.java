@@ -1,4 +1,4 @@
-package com.cat.leopard.action.annotation;
+package com.cat.external.http.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

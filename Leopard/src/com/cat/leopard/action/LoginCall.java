@@ -12,7 +12,8 @@ package com.cat.leopard.action;
 import android.content.Context;
 
 import com.android.volley.Request.Method;
-import com.cat.leopard.action.annotation.Request;
+import com.cat.external.http.BaseCall;
+import com.cat.external.http.annotation.Request;
 import com.cat.leopard.action.request.LoginRequest;
 
 /**

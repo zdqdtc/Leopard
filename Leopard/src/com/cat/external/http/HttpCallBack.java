@@ -7,7 +7,7 @@
  *      
  *     Copyright © 1999-2014, leopard, All Rights Reserved 
  */
-package com.cat.leopard.action;
+package com.cat.external.http;
 
 /**
  * 类名:		HttpCallBack

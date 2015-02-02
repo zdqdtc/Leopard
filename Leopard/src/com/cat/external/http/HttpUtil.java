@@ -7,9 +7,9 @@
  *      
  *     Copyright © 1999-2014, leopard, All Rights Reserved 
  */
-package com.cat.leopard.action.annotation;
+package com.cat.external.http;
 
-import com.cat.leopard.action.BaseCall;
+import com.cat.external.http.annotation.Request;
 
 /**
  * 类名:		HttpUtil

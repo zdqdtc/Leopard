@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cat.external.factory.CTBitMapFactory;
 import com.cat.leopard.R;
-import com.cat.leopard.factory.CTBitMapFactory;
 import com.cat.leopard.model.PackInfo;
 
 @SuppressLint("InflateParams")

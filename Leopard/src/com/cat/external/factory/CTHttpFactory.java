@@ -7,7 +7,7 @@
  *      
  *     Copyright © 1999-2014, leopard, All Rights Reserved 
  */
-package com.cat.leopard.factory;
+package com.cat.external.factory;
 
 import net.tsz.afinal.FinalHttp;
 

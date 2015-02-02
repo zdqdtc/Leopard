@@ -16,7 +16,7 @@ package com.cat.leopard.action;
  *
  */
 public class ActionConstant {
-    static final String BASE_URL     = "http://tzs2.hengtiansoft.com/tzs/";
+    public static final String BASE_URL     = "http://tzs2.hengtiansoft.com/tzs/";
 
     static final String ACTION_LOGIN = "customer/checkAppPassword";
    
