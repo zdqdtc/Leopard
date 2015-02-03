@@ -28,7 +28,7 @@ public class UpdateService extends Service {
         }
 
         @Override
-        public void checkLatestVersion(String url, Parser parser, RequestVersion version) {
+        public void checkLatestVersion(String url, ParserAndGenerate parser, RequestVersion version) {
             // TODO Auto-generated method stub  
             
             

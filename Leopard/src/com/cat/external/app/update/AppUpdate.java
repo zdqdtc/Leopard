@@ -26,7 +26,7 @@ public interface AppUpdate {
      * @param parser
      * 
      */
-    void checkLatestVersion(String url, Parser parser, RequestVersion version);
+    void checkLatestVersion(String url, ParserAndGenerate parser, RequestVersion version);
 
     /**
      * 从指定版本中下载并安装APK文件

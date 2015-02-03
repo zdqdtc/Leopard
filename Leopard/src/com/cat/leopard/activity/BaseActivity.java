@@ -34,6 +34,7 @@ public class BaseActivity extends FragmentActivity  {
         // TODO Auto-generated method stub
         super.onCreate(arg0);
         ActivityTaskManager.getInstance().putActivity(this.getClass().getName(), this);
+    
     }
 
     @Override

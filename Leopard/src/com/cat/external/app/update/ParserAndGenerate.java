@@ -9,7 +9,7 @@ package com.cat.external.app.update;
  * @author ilovedeals
  * 
  */
-public interface Parser {
+public interface ParserAndGenerate {
 	/**
 	 * 将字符数据解析成Version对象
 	 * @param response
