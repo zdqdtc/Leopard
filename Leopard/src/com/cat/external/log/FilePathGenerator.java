@@ -1,5 +1,6 @@
 package com.cat.external.log;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -15,7 +16,8 @@ import java.util.Date;
  */
 public abstract class FilePathGenerator {
     private String path = null;
-    protected String dir = "/mnt/sdcard/snowdream/android/log";
+    @SuppressLint("SdCardPath")
+	protected String dir = "/mnt/sdcard/snowdream/android/log";
     protected File file = null;
 
     /**
@@ -29,6 +31,7 @@ public abstract class FilePathGenerator {
     protected String suffix = ".log";
 
     //Supress default constructor for noninstantiability
+    @SuppressWarnings("unused")
     private FilePathGenerator() {
         throw new AssertionError();
     }

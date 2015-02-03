@@ -26,6 +26,7 @@ public abstract class LogFilter {
         private String tag = null;
 
         //Supress default constructor for noninstantiability
+        @SuppressWarnings("unused")
         private TagFilter() {
             throw new AssertionError();
         }
@@ -60,6 +61,7 @@ public abstract class LogFilter {
         private Log.LEVEL level = null;
 
         //Supress default constructor for noninstantiability
+        @SuppressWarnings("unused")
         private LevelFilter() {
             throw new AssertionError();
         }
@@ -88,6 +90,7 @@ public abstract class LogFilter {
         private String msg = null;
 
         //Supress default constructor for noninstantiability
+        @SuppressWarnings("unused")
         private ContentFilter() {
             throw new AssertionError();
         }

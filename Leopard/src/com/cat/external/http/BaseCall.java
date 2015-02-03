@@ -11,49 +11,59 @@ package com.cat.external.http;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.content.Context;
+
 import com.alibaba.fastjson.JSON;
 import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.cat.external.util.LogUtils;
 import com.cat.leopard.action.ActionConstant;
 
 /**
  * 类名:		BaseRequest
  * 描述:		TODO
  * @author 	diqingzhu
+ * @param <T>
  *
  */
-public class BaseCall<T> {
-    private String     strAction   = "";
+public class BaseCall{
+    private String       strAction   = "";
 
-    private JSONObject requestBody;
+    private JSONObject   requestBody;
 
-    private Context    context;
+    private Context      context;
 
-    private int        method      = Method.POST;
+    private int          method      = Method.POST;
 
-    private boolean    isFileCache = false;
+    private boolean      isFileCache = false;
 
-    public BaseCall(Context context, T object) {
+    private HttpCallBack mCallBack;
+    
+    
+
+    public BaseCall(Context context, Object object, HttpCallBack callBack) {
         this.context = context;
         HttpUtil httpUtil = new HttpUtil(this);
         httpUtil.initRequest();
         setRequestBody(object);
+        mCallBack = callBack;
+  
     }
 
     public void request() {
         JsonObjectRequest request = new JsonObjectRequest(getMethod(), strAction, requestBody, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                LogUtils.e(response.toString());
+                mCallBack.response(0, response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                LogUtils.e(error.networkResponse.statusCode + "");
+                
+                
+//                mCallBack.re
             }
         });
         request.setShouldCache(isFileCache);

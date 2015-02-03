@@ -9,12 +9,16 @@
  */
 package com.cat.external.http;
 
+import org.json.JSONObject;
+
 /**
  * 类名:		HttpCallBack
  * 描述:		网络回调接口
  * @author 	diqingzhu
  *
  */
-public interface HttpCallBack<T> {
-    public void httpStateCallBack(int code, T data);
+public interface HttpCallBack {
+    
+    public void response(int code,JSONObject json);
+    
 }

@@ -18,9 +18,9 @@ import com.cat.external.http.annotation.Request;
  *
  */
 public class HttpUtil {
-    private BaseCall<?> request;
+    private BaseCall request;
 
-    public HttpUtil(BaseCall<?> request) {
+    public HttpUtil(BaseCall request) {
         this.request = request;
     }
 

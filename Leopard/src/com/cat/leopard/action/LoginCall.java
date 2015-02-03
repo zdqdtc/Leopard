@@ -13,8 +13,8 @@ import android.content.Context;
 
 import com.android.volley.Request.Method;
 import com.cat.external.http.BaseCall;
+import com.cat.external.http.HttpCallBack;
 import com.cat.external.http.annotation.Request;
-import com.cat.leopard.action.request.LoginRequest;
 
 /**
  * 类名:		LoginRequest
@@ -23,8 +23,14 @@ import com.cat.leopard.action.request.LoginRequest;
  *
  */
 @Request(Method = Method.POST, Action = ActionConstant.ACTION_LOGIN, CacheEnable = true)
-public class LoginCall extends BaseCall<LoginRequest> {
-    public LoginCall(Context context, LoginRequest object) {
-        super(context, object);
+public class LoginCall extends BaseCall {
+
+    public LoginCall(Context context, Object object, HttpCallBack callBack) {
+        super(context, object, callBack);
+        // TODO Auto-generated constructor stub
+        
     }
+
+    
+   
 }

@@ -7,7 +7,7 @@ package com.cat.leopard.action.response;
  *
  * @param <T>
  */
-public class BaseResponse<T> {
+public class BaseResponse {
     /**
      * 变量名:		erroCode
      * 描述:			TODO
@@ -22,12 +22,7 @@ public class BaseResponse<T> {
      */
     private String erroMsg;
 
-    /**
-     * 变量名:		data
-     * 描述:			TODO
-     * 取值含义:		返回的数据集合
-     */
-    private T      data;
+
 
     public int getErroCode() {
         return erroCode;
@@ -45,11 +40,5 @@ public class BaseResponse<T> {
         this.erroMsg = erroMsg;
     }
 
-    public T getData() {
-        return data;
-    }
 
-    public void setData(T data) {
-        this.data = data;
-    }
 }
