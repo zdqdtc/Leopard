@@ -1,5 +1,11 @@
 package com.cat.external.app.update;
 
+/**
+ * 类名:		RequestVersion
+ * 描述:		TODO
+ * @author 	diqingzhu
+ *
+ */
 public class RequestVersion {
     /**
      * 版本号 e.g: 13

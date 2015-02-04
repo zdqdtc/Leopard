@@ -28,7 +28,7 @@ import com.cat.leopard.action.ActionConstant;
  * @param <T>
  *
  */
-public class BaseCall{
+public class BaseCall {
     private String       strAction   = "";
 
     private JSONObject   requestBody;
@@ -40,8 +40,6 @@ public class BaseCall{
     private boolean      isFileCache = false;
 
     private HttpCallBack mCallBack;
-    
-    
 
     public BaseCall(Context context, Object object, HttpCallBack callBack) {
         this.context = context;
@@ -49,7 +47,6 @@ public class BaseCall{
         httpUtil.initRequest();
         setRequestBody(object);
         mCallBack = callBack;
-  
     }
 
     public void request() {
@@ -60,9 +57,7 @@ public class BaseCall{
             }
         }, new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
+            public void onErrorResponse(VolleyError error) {}
         });
         request.setShouldCache(isFileCache);
         CTVolleyHttpFactory.getIntance(context).add(request);

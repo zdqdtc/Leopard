@@ -33,12 +33,6 @@ public class WebViewsActivity extends Activity {
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-     
-//        getActionBar();
-//        getActionBar().show();
-//        getActionBar().setHomeButtonEnabled(true);
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
-//        getActionBar().setDisplayShowHomeEnabled(true);
        
     }
     @Override

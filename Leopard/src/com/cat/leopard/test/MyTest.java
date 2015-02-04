@@ -3,10 +3,8 @@ package com.cat.leopard.test;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import junit.framework.Assert;
 import android.test.AndroidTestCase;
-
 import com.cat.external.log.Log;
 import com.cat.leopard.bean.Article;
 import com.cat.leopard.bean.User;

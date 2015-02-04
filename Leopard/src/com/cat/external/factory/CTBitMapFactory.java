@@ -38,8 +38,7 @@ public class CTBitMapFactory {
         }
         intance = FinalBitmap.create(context);
         intance.configBitmapLoadThreadSize(LOAD_THREAD_SIZE);
-        intance.configDiskCachePath(Constant.BASE_FILE + context.getPackageName() + File.separator
-                + IMAGE_FILE + File.separator);
+        intance.configDiskCachePath(Constant.BASE_FILE + context.getPackageName() + File.separator + IMAGE_FILE + File.separator);
         intance.configRecycleImmediately(false);
         intance.configLoadingImage(R.drawable.progress_1);
         intance.configLoadfailImage(R.drawable.load_fail);
