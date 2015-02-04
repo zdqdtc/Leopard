@@ -27,8 +27,5 @@ public abstract class BaseDao {
     public BaseDao(Context context) {
         mContext = context;
         helper = DatabaseHelper.getHelper(mContext);
-        
-        
-        
     }
 }
