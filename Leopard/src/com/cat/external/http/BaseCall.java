@@ -61,9 +61,7 @@ public class BaseCall{
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                
-                
-//                mCallBack.re
+
             }
         });
         request.setShouldCache(isFileCache);

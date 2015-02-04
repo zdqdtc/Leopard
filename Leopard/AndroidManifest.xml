@@ -37,6 +37,17 @@
             android:name="com.cat.leopard.activity.WebViewsActivity"
             android:label="@string/title_activity_web_views" >
         </activity>
+
+        <!-- 单元测试 -->
+
+        <uses-library android:name="android.test.runner" />
     </application>
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test for my app"
+        android:targetPackage="com.cat.leopard" />
 
 </manifest>
