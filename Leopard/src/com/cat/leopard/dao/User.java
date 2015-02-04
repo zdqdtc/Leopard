@@ -1,9 +1,8 @@
-package com.cat.leopard.bean;
-
-
+package com.cat.leopard.dao;
 
 import java.util.Collection;
 
+import com.cat.leopard.bean.Article;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;

@@ -7,6 +7,7 @@ import java.util.Map;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.cat.leopard.bean.Article;
 import com.cat.leopard.bean.User;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
@@ -20,13 +21,14 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private Map<String, Dao>    daos       = new HashMap<String, Dao>();
 
     private DatabaseHelper(Context context) {
-        super(context, TABLE_NAME, null, 4);
+        super(context, TABLE_NAME, null, 6);
     }
 
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
         try {
             TableUtils.createTable(connectionSource, User.class);
+            TableUtils.createTable(connectionSource, Article.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -35,6 +37,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
         try {
+            TableUtils.dropTable(connectionSource, User.class, true);
             TableUtils.dropTable(connectionSource, User.class, true);
             onCreate(database, connectionSource);
         } catch (SQLException e) {
