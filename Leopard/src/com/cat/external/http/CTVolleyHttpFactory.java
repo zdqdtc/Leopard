@@ -31,6 +31,7 @@ import com.android.volley.toolbox.HurlStack;
  *
  */
 public class CTVolleyHttpFactory {
+    
     private static RequestQueue queue;
 
     private static HttpStack    stack;
@@ -62,8 +63,5 @@ public class CTVolleyHttpFactory {
             queue.start();
         }
         return queue;
-        
-        
-        
     }
 }
